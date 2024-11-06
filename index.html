@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Break Zone FoodShop</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Styling */
+        #top {
+            color: rgb(245, 10, 10);
+            text-align: center;
+            font-size: 46px;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+        #top1 {
+            text-align: center;
+            color: black;
+            font-size: 21px;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+        /* Navigation Bar Styling */
+        #navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: gray;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 15px;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+        #navbar img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+
+        #navcontent {
+            display: flex;
+            justify-content: center;
+        }
+
+        #navcontent li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        #navcontent a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        #navcontent a:hover {
+            background-color: red;
+            border-radius: 10px;
+        }
+
+        /* Main Container Background */
+        #container1 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            height: 63vh;
+        }
+
+        #container1::before {
+            content: '';
+            background: url(https://i.postimg.cc/WbMpLQnJ/fff.jpg) no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.89;
+            z-index: -1;
+            border-bottom-left-radius: 100px;
+        }
+
+        #row1 {
+            color: black;
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        /* Button Styling */
+        .btn {
+            margin-top: 15px;
+            padding: 10px;
+            border: 3px solid white;
+            border-radius: 15px;
+            background-color: yellow;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: red;
+        }
+
+        /* Feature Row Styling */
+        #container3 {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        #row2,
+        #row3 {
+            width: 24vw;
+            height: 21vh;
+            box-shadow: 2px 7px 16px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            border-radius: 40px;
+            position: relative;
+        }
+
+        #row2::before {
+            content: '';
+            background: url(https://i.postimg.cc/Dwnv2Bjp/Whats-App-Image-2024-11-05-at-12-14-25-PM-2.jpg) no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            z-index: -1;
+        }
+
+        #row3::before {
+            content: '';
+            background: url(https://i.postimg.cc/KYYmT4yn/Whats-App-Image-2024-11-05-at-12-14-25-PM-3.jpg) no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            z-index: -1;
+        }
+
+        /* Featured Items Section */
+        #top3 {
+            text-align: center;
+            color: red;
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+        #container4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        #row4,
+        #row5,
+        #row6 {
+            height: 360px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #row4 {
+            background-image: url(https://i.postimg.cc/nhKGMMMm/Whats-App-Image-2024-11-05-at-12-14-25-PM-5.jpg);
+        }
+
+        #row5 {
+            background-image: url(https://i.postimg.cc/8CTj01g5/Whats-App-Image-2024-11-05-at-12-14-25-PM-1.jpg);
+        }
+
+        #row6 {
+            background-image: url(https://i.postimg.cc/B6g5VhzW/Whats-App-Image-2024-11-05-at-12-14-24-PM.jpg);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1131px) {
+            #row4,
+            #row5,
+            #row6 {
+                width: 90vw;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #row4,
+            #row5,
+            #row6 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="top"><i>The Break Zone</i></h1>
+        <h2 id="top1">Welcome to The Break Zone FoodShop</h2>
+    </header>
+    <hr>
+
+    <nav id="navbar">
+        <img src="https://i.postimg.cc/Dwnv2Bjp/Whats-App-Image-2024-11-05-at-12-14-25-PM-2.jpg" alt="Logo">
+        <ul id="navcontent">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="container1">
+        <div id="row1">Welcome to our Canteen!</div>
+        <div id="container3">
+            <div id="row2"></div>
+            <div id="row3"></div>
+        </div>
+    </div>
+
+    <hr>
+    <h2 id="top3"><i>Featured Items in Our Canteen</i></h2>
+    <div id="container4">
+        <div id="row4"></div>
+        <div id="row5"></div>
+        <div id="row6"></div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2023-2024 The Break Zone FoodShop. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
